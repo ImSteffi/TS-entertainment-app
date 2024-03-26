@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Layout from "../../Layout";
 import { Box, Paper, InputBase, InputAdornment, Typography } from "@mui/material";
 import SearchIcon from '../../assets/icons/icon-search.svg';
+import MovieList from '../../components/icons/movie-list'
+import MovieTrendList from '../../components/icons/movie-list'
+import { MovieDataType } from "../../assets/data";
+import { MovieContext } from "../../context/movie-context";
 
 const Home = () => {
   const [search, setSearch] = useState("");
+  const [searchList, setSearchList] = useState<MovieDataType[]>([])
+  const { state } = useContext(MovieContext)
+  const { movies } = state
+  const trendingList = movies.filter((item) => item.isTrending === true)
+  const recommendList = movies.filter((item) => item.isTrending !== true)
   
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
+    const newList = movies.filter((movie) => movie.title.toLowerCase().includes(search.toLowerCase()))
+    setSearchList(newList)
   };
 
   return (
@@ -49,13 +60,13 @@ const Home = () => {
                         <Typography variant="h5" component="h1" my={6} fontWeight={400}>
                             Trending
                         </Typography>
-                        {/* <MovieTrendList trendingList={trendingList} /> */}
+                        <MovieTrendList trendingList={trendingList} />
                     </Box>
                     <Box width="100%">
                         <Typography variant="h5" component="h1" my={6} fontWeight={400}>
                             Recommended For You
                         </Typography>
-                        {/* <MovieList recommendList={recommendList} /> */}
+                        <MovieList recommendList={recommendList} />
                     </Box>
                 </Box>
             ) : (
