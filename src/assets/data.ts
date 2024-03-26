@@ -25,13 +25,13 @@ export const moviesData = [
     title: "Beyond Earth",
     thumbnail: {
       trending: {
-        small: "./thumbnails/beyond-earth/trending/small.jpg",
-        large: "./thumbnails/beyond-earth/trending/large.jpg",
+        small: "../../public/thumbnails/beyond-earth/trending/small.jpg",
+        large: "../../public/thumbnails/beyond-earth/trending/large.jpg",
       },
       regular: {
-        small: "./thumbnails/beyond-earth/regular/small.jpg",
-        medium: "./thumbnails/beyond-earth/regular/medium.jpg",
-        large: "./thumbnails/beyond-earth/regular/large.jpg",
+        small: "../../public/thumbnails/beyond-earth/regular/small.jpg",
+        medium: "../../public/thumbnails/beyond-earth/regular/medium.jpg",
+        large: "../../public/thumbnails/beyond-earth/regular/large.jpg",
       },
     },
     year: 2019,
@@ -45,13 +45,13 @@ export const moviesData = [
     title: "Bottom Gear",
     thumbnail: {
       trending: {
-        small: "./thumbnails/bottom-gear/trending/small.jpg",
-        large: "./thumbnails/bottom-gear/trending/large.jpg",
+        small: "../../public/thumbnails/bottom-gear/trending/small.jpg",
+        large: "../../public/thumbnails/bottom-gear/trending/large.jpg",
       },
       regular: {
-        small: "./thumbnails/bottom-gear/regular/small.jpg",
-        medium: "./thumbnails/bottom-gear/regular/medium.jpg",
-        large: "./thumbnails/bottom-gear/regular/large.jpg",
+        small: "../../public/thumbnails/bottom-gear/regular/small.jpg",
+        medium: "../../public/thumbnails/bottom-gear/regular/medium.jpg",
+        large: "../../public/thumbnails/bottom-gear/regular/large.jpg",
       },
     },
     year: 2021,

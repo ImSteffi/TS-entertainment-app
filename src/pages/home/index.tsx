@@ -3,7 +3,7 @@ import Layout from "../../Layout";
 import { Box, Paper, InputBase, InputAdornment, Typography } from "@mui/material";
 import SearchIcon from '../../assets/icons/icon-search.svg';
 import MovieList from '../../components/icons/movie-list'
-import MovieTrendList from '../../components/icons/movie-list'
+import MovieTrendList from '../../components/icons/movie-list/movieTrendList'
 import { MovieDataType } from "../../assets/data";
 import { MovieContext } from "../../context/movie-context";
 
